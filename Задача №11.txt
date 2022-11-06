@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Введите первое число с клавиатуры");
+        String str = scan.nextLine();
+        double number1 = Double.valueOf(str);
+
+        System.out.println("Введите второе число с клавиатуры");
+        int number2 = scan.nextInt();
+
+        double number3 = number2;
+        int result = Double.compare(number1, number3);
+        if (result == 0)
+            System.out.println("Значения введенных чисел равны");
+        else if (result == 1)
+            System.out.println("Большее число " + number1);
+        else
+            System.out.println("Большее число " + number3);
+
+        double result2 = Math.min(number1, number3);
+        if (number1 != number3)
+            System.out.println("Меньшее число " + result2);
+    }
+}
